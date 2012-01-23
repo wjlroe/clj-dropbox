@@ -1,10 +1,10 @@
 (ns clj-dropbox.constants)
 
-(def ^:private +drbx-api-version+ 0)
+(def ^:private +drbx-api-version+ 1)
 
-(def ^:private +drbx-api+ (str "http://api.dropbox.com/" +drbx-api-version+ "/"))
+(def ^:private +drbx-api+ (str "https://api.dropbox.com/" +drbx-api-version+ "/"))
 
-(def +drbx-oauth-host+ (str "http://dropbox.com/" +drbx-api-version+ "/oauth/"))
+(def +drbx-oauth-host+ (str "https://api.dropbox.com/" +drbx-api-version+ "/oauth/"))
 
 (def +drbx-oauth-token+ (str +drbx-api+  "token"))
 
@@ -24,21 +24,21 @@
 
 (defn drbx-metadata-host [mode]
     (cond (= mode :sandbox)
-	(str "http://api.dropbox.com/" +drbx-api-version+ "/metadata/sandbox/")
+	(str "https://api.dropbox.com/" +drbx-api-version+ "/metadata/sandbox/")
 	(= mode :dropbox)
-	(str "http://api.dropbox.com/" +drbx-api-version+ "/metadata/dropbox/")
+	(str "https://api.dropbox.com/" +drbx-api-version+ "/metadata/dropbox/")
 	:default
 	(throw (IllegalArgumentException.
 		(str "Bad mode: " mode " should be one of " +modes+)))))
 
 (def +drbx-copy-file+
-  (str "http://api.dropbox.com/" +drbx-api-version+ "/fileops/copy"))
+  (str "https://api.dropbox.com/" +drbx-api-version+ "/fileops/copy"))
 
 (def +drbx-move-file+
-  (str "http://api.dropbox.com/" +drbx-api-version+ "/fileops/move"))
+  (str "https://api.dropbox.com/" +drbx-api-version+ "/fileops/move"))
 
 (def +drbx-create-folder+
-  (str "http://api.dropbox.com/" +drbx-api-version+ "/fileops/create_folder"))
+  (str "https://api.dropbox.com/" +drbx-api-version+ "/fileops/create_folder"))
 
 (def +drbx-delete+
-  (str "http://api.dropbox.com/" +drbx-api-version+ "/fileops/delete"))
+  (str "https://api.dropbox.com/" +drbx-api-version+ "/fileops/delete"))
