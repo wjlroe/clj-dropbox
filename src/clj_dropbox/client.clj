@@ -1,7 +1,7 @@
 (ns clj-dropbox.client
   (:require
    [clojure.java [io :as io]]
-   [clojure.contrib [json :as cc.json]]
+   [clojure.data [json :as cc.json]]
    [clj-dropbox [constants :as constants] [oauth :as oauth]])
   (:import
    [org.apache.http.entity.mime MultipartEntity]
@@ -65,7 +65,7 @@
 
 ;;; API Calls ;;;
 
-(def  *client* nil)
+(def ^:dynamic *client* nil)
 
 (defn user-info
   "returns map of user data"

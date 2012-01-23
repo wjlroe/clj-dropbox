@@ -2,7 +2,7 @@
 
 (def ^:private +drbx-api-version+ 1)
 
-(def ^:private +drbx-api+ (str "https://api.dropbox.com/" +drbx-api-version+ "/"))
+(def +drbx-api+ (str "https://api.dropbox.com/" +drbx-api-version+ "/"))
 
 (def +drbx-oauth-host+ (str "https://api.dropbox.com/" +drbx-api-version+ "/oauth/"))
 
