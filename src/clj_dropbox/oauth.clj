@@ -16,7 +16,7 @@
 
 (defn approval-uri [consumer oauth-token callback-uri]
   (format "%s/authorize?%s"
-	  constants/+drbx-oauth-host+
+	  constants/+drbx-oauth-approval-host+
 	  (http/encode-query	   
 	   (merge {"oauth_token" oauth-token}
 		  (if callback-uri

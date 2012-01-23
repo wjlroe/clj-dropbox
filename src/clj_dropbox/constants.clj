@@ -6,6 +6,8 @@
 
 (def +drbx-oauth-host+ (str "https://api.dropbox.com/" +drbx-api-version+ "/oauth/"))
 
+(def +drbx-oauth-approval-host+ (str "https://www.dropbox.com/" +drbx-api-version+ "/oauth"))
+
 (def +drbx-oauth-token+ (str +drbx-api+  "token"))
 
 (def +drbx-files-host+  (str "https://api-content.dropbox.com/" +drbx-api-version+
