@@ -6,7 +6,8 @@
   (:import
    [org.apache.http.entity.mime MultipartEntity]
    [org.apache.http.entity.mime.content StringBody FileBody InputStreamBody]
-   [org.apache.james.mime4j.message BodyPart]))
+   ;;[org.apache.james.mime4j.message BodyPart]
+   ))
 
 (declare url-decode-content ensure-content)
 
