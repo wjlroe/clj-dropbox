@@ -1,4 +1,4 @@
-(defproject org.aria42/clj-dropbox "0.2-SNAPSHOT"
+(defproject org.clojars.wjlroe/clj-dropbox "0.2-SNAPSHOT"
   :decription "Clojure bindings to Dropbox API"
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [org.clojure/data.json "0.1.2"]
